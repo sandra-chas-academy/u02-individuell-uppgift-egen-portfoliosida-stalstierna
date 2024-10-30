@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body{
+    height: 3000px;
+    background-color: #1e1e1e;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 4rem;
+    border-top: 2px solid #fff;
+    background-color: #1e1e1e;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 5%;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.about_me{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10% 5%;
+}
+
+.selfie{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background:  repeating-conic-gradient(#1e1e1e  0deg 10deg, #1e1e1e  10deg 20deg, #624050  20deg 30deg);
+    padding: 10px;
+}
+
+.selfie:hover{
+
+}
+
+
+
+    @media (min-width: 800px) {
+        body{
+            background: linear-gradient(
+            to right, 
+            #1e1e1e 0%, 
+            #1e1e1e 30%, 
+            #624050 30%, 
+            #624050 100%)
+        }
+
+        nav {
+            position:static;
+            border: none;
+            background-color: transparent;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content:end;
+            align-items: center;
+            margin-right: 10%;
+            height: 100%;
+            gap: 5%;
+        }
+    }
+
+
+/* Ljust läge */
+/* background: linear-gradient(
+    to right, 
+    #e6d6d6 0%, 
+    #e6d6d6 30%, 
+    #8a6576 30%, 
+    #8a6576 100%) */
