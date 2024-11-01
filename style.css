@@ -7,8 +7,14 @@
 }
 
 body{
-    height: 3000px;
+    /* height: 3000px; */
     background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstPage{
+    height: 100vh;
 }
 
 nav {
@@ -34,10 +40,48 @@ li a{
     color: #fff;
 }
 
-.about_me{
+#darkmode{
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #999999;
+    position:absolute;
+    top: 2rem;
+    left: 2rem;
     display: flex;
-    justify-content: flex-end;
-    padding: 10% 5%;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer; 
+}
+
+.darkmode_button{
+    background-color: #000000;
+    border-radius: 50px;
+    width: 27px;
+    height: 27px;
+}
+
+.darkmode_desktop{
+    display: none;
+}
+
+.about_me{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: end;
+}
+
+.about_me_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  repeating-conic-gradient(#1e1e1e  0deg 10deg, #1e1e1e  10deg 20deg, #624050  20deg 30deg);
+    padding: 10px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 2rem;
 }
 
 .selfie{
@@ -45,14 +89,12 @@ li a{
     width: 300px;
     height: 300px;
     object-fit: cover;
-    background:  repeating-conic-gradient(#1e1e1e  0deg 10deg, #1e1e1e  10deg 20deg, #624050  20deg 30deg);
-    padding: 10px;
 }
 
-.selfie:hover{
-
+.projects{
+    height: 100vh;
+    background: #3c2731;
 }
-
 
 
     @media (min-width: 800px) {
@@ -66,9 +108,9 @@ li a{
         }
 
         nav {
-            position:static;
             border: none;
             background-color: transparent;
+            top: 0;
         }
 
         ul{
@@ -76,9 +118,52 @@ li a{
             flex-direction: row;
             justify-content:end;
             align-items: center;
-            margin-right: 10%;
+            margin-right: 15%;
             height: 100%;
             gap: 5%;
+        }
+
+        li a{
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .navbarScroll{
+            background-color: #1c1c1c;
+            border-radius: 50px;
+            transition: 3s linear;
+            transform: translateY(5px);
+            
+            
+        }
+        .navbarScroll a{
+            color: #fff;
+        }
+
+        #darkmode_desktop{
+            width: 60px;
+            height: 30px;
+            border-radius: 50px;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid #999999;
+            position:absolute;
+            top: 1rem;
+            right: 3%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer; 
+        }
+
+        .darkmode_button{
+            background-color: #000000;
+            border-radius: 50px;
+            width: 27px;
+            height: 27px;
+        }
+
+        #darkmode{
+            display: none;
         }
     }
 
