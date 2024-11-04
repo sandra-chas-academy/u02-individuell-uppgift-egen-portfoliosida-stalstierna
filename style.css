@@ -24,6 +24,7 @@ nav {
     height: 4rem;
     border-top: 2px solid #fff;
     background-color: #1e1e1e;
+    box-shadow: 0px 0px 10px #fff;
 }
 
 ul{
@@ -38,6 +39,11 @@ ul{
 li a{
     text-decoration: none;
     color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+}
+
+li a:hover{
+    opacity: 70%;
 }
 
 #darkmode{
@@ -53,6 +59,7 @@ li a{
     align-items: center;
     justify-content: flex-start;
     cursor: pointer; 
+    box-shadow: 0px 0px 10px #ffffff51;
 }
 
 .darkmode_button{
@@ -66,22 +73,26 @@ li a{
     display: none;
 }
 
-.about_me{
-    margin-top: 10vh;
+.home{
+    margin-top: 4rem;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: end;
 }
 
-.about_me_img{
+.home_img{
     display: flex;
     align-items: center;
     justify-content: center;
     background:  repeating-conic-gradient(#1e1e1e  0deg 10deg, #1e1e1e  10deg 20deg, #624050  20deg 30deg);
-    padding: 10px;
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    margin: 2rem;
+    margin-top: 2rem;
+    margin-right: 10vw;
+    margin-bottom: 2rem;
+    padding: 10px;
+    box-shadow: 0px 0px 20px #624050;
 }
 
 .selfie{
@@ -91,11 +102,110 @@ li a{
     object-fit: cover;
 }
 
-.projects{
+.home_text{
+    width: 320px;
+    align-self: flex-start;
+    color: #fff;
+    margin-left: 10vw;
+    text-shadow: 0px 0px 10px #fff;
+}
+
+.home_text h1{
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.home_text h2{
+    font-size: 1.5rem;
+}
+
+.section_about_me{
     height: 100vh;
+    background-color: #999999;
+}
+
+.section_projects{
+    height: auto;
+    padding-bottom: 100px;
     background: #3c2731;
 }
 
+.projects_heading{
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+}
+
+.all_projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+    width: 320px;
+    height: 350px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+
+.project_img{
+    background-color: #948f8f;
+    width: 300px;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.section_projects img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.project_info{
+    margin: 1rem 1.5rem;
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+}
+
+.project_info h3{
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.project_text{
+    width: 80%;
+    line-height: 1.2rem;
+}
+
+.project_arrow{
+    font-size: 2.5rem;
+    align-self: flex-end;
+    /* background-color: #948f8f; */
+    margin-left: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project_arrow:hover{
+    opacity: 70%;
+    font-size: 2.7rem;
+    text-shadow: 0px 0px 5px #000000b2;
+    transition: 0.3s;
+}
 
     @media (min-width: 800px) {
         body{
@@ -111,6 +221,10 @@ li a{
             border: none;
             background-color: transparent;
             top: 0;
+            box-shadow: none;
+            width: 95vw;
+            margin-left: 2.5vw;
+            margin-right: 2.5vw;
         }
 
         ul{
@@ -126,6 +240,8 @@ li a{
         li a{
             color: #000000;
             font-weight: 700;
+            text-shadow: 0px 0px 5px #0000008f;
+            font-size: 1.2rem;
         }
 
         .navbarScroll{
@@ -133,11 +249,11 @@ li a{
             border-radius: 50px;
             transition: 3s linear;
             transform: translateY(5px);
-            
-            
+            box-shadow: 0 0 10px #fff;
         }
         .navbarScroll a{
             color: #fff;
+            text-shadow: 0px 0px 5px #ffffff;
         }
 
         #darkmode_desktop{
@@ -153,6 +269,7 @@ li a{
             align-items: center;
             justify-content: flex-start;
             cursor: pointer; 
+            box-shadow: 0px 0px 10px #0000008f;
         }
 
         .darkmode_button{
@@ -165,6 +282,83 @@ li a{
         #darkmode{
             display: none;
         }
+
+        .home{
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 15vh;
+        }
+
+        .home_img{
+            width: 370px;
+            height: 370px;
+            margin: 1rem;
+            box-shadow: 0 0 20px #fff;
+        }
+        
+        .selfie{
+            width: 350px;
+            height: 350px;
+        }
+
+        .home_text{
+           width:500px;
+            align-self: center;
+            color: #fff;
+            margin: 1rem;
+        }
+
+        .home_text h1{
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .home_text h2{
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+
+        footer{
+            background-color: #1e1e1e;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+            /* box-shadow: 0px 0px 10px #000; */
+        }
+
+        .footer_arrow{
+            background-color: #1e1e1e;
+            transform: rotate(90deg);
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom: 50px;
+            color: #fff;
+            transition: 0.3s;
+            /* box-shadow: 0px 0px 10px #000; */
+        }
+
+        .footer_arrow:hover{
+            bottom: 55px;
+            color: #ffffff9a;
+            transition: 0.3s;
+           
+        }
+
+        .footer_arrow p{
+            text-align: center;
+            font-size: 4rem;
+            line-height: 2.5rem;
+            margin-right: 65px;
+            cursor: pointer;
+            text-shadow: 0px 0px 10px #fff;
+        }
+        
     }
 
 
