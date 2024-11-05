@@ -240,6 +240,8 @@ footer{
             width: 95vw;
             margin-left: 2.5vw;
             margin-right: 2.5vw;
+            transition: 2s linear;
+            z-index: 10;
         }
 
         ul{
@@ -309,7 +311,7 @@ footer{
             height: 370px;
             margin: 1rem;
             box-shadow: 0 0 20px #fff;
-            z-index: 10;
+            z-index: 5;
             cursor: pointer;
         }
         
