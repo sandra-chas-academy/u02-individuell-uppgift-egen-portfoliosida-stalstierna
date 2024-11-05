@@ -8,13 +8,13 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <section class="firstPage">
+    <section class="firstPage" id="firstPage">
 
       <nav id="navbar">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#firstPage">Home</a></li>
+          <li><a href="#section_about_me">About Me</a></li>
+          <li><a href="#section_projects">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <div id="darkmode_desktop"><div class="darkmode_button"></div></div>
@@ -26,18 +26,18 @@
           <img class="selfie" src="pexels-moose-photos-170195-1036623.jpg" alt=""/>
         </div>
         <div class="home_text">
-          <h1>Hi, I'm Andréa</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, suscipit.</h2>
+          <h1 class="home_text_h1">Hi, I'm Andréa</h1>
+          <h2 class="home_text__h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, suscipit.</h2>
         </div>
-        <p class="home_arrow">&#10552;</p>
+        <p class="home_arrow">&#10552; <span class="arrow_transition"></span></p>
       </div>
     </section>
 
-    <section class="section_about_me">
+    <section class="section_about_me" id="section_about_me">
 
     </section>
 
-    <section class="section_projects">
+    <section class="section_projects" id="section_projects">
       <h2 class="projects_heading">My Projects</h2>
 
       <div class="all_projects">
@@ -71,8 +71,14 @@
 
     <footer>
       <div class="footer_arrow">
-        <p>&#10094</p>
+        <a href="#firstPage">&#10094</a>
       </div>
+
+      <!-- <div class="social_media">
+        <img src="github-142-svgrepo-com.svg" alt="">
+        <img src="linkedin-161-svgrepo-com.svg" alt="">
+      </div> -->
+
     </footer>
   </body>
 </html>

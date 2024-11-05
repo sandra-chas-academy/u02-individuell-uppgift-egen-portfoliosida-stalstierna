@@ -218,6 +218,10 @@ li a:hover{
     transition: 0.3s;
 }
 
+footer{
+    display: none;
+}
+
     @media (min-width: 800px) {
         body{
             background: linear-gradient(
@@ -305,6 +309,8 @@ li a:hover{
             height: 370px;
             margin: 1rem;
             box-shadow: 0 0 20px #fff;
+            z-index: 10;
+            cursor: pointer;
         }
         
         .selfie{
@@ -313,10 +319,18 @@ li a:hover{
         }
 
         .home_text{
-           width:500px;
+            width:500px;
             align-self: center;
             color: #fff;
             margin: 1rem;
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: 1.5s ease-in;
+        }
+
+        .home_animation{
+            transform: translateX(0);
+            opacity: 100%;
         }
 
         .home_text h1{
@@ -360,7 +374,6 @@ li a:hover{
             align-items: center;
             position: relative;
             bottom: 50px;
-            color: #fff;
             transition: 0.3s;
             /* box-shadow: 0px 0px 10px #000; */
         }
@@ -372,15 +385,40 @@ li a:hover{
            
         }
 
-        .footer_arrow p{
+        .footer_arrow a{
             text-align: center;
             font-size: 4rem;
             line-height: 2.5rem;
             margin-right: 65px;
             cursor: pointer;
             text-shadow: 0px 0px 10px #fff;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .social_media img{
+            width: 25px;
+            height: auto;
+            cursor: pointer;
+        }
+       
+        .social_media img:hover{
+            width: 28px;
+            cursor: pointer;
+            opacity: 0%;
         }
         
+        /* .social_media {
+        position: relative;
+        bottom: -40px;
+        right: -320px;
+        background-color: #766c6c;
+        height: 40px;
+        width: 90px;
+        display: flex;
+        justify-content: space-around;
+    } */
+    
     }
 
 
