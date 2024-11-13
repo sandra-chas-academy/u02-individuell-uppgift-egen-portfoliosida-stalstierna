@@ -10,11 +10,9 @@ window.addEventListener("scroll", function () {
   if (document.documentElement.clientWidth >= 800) {
     if (window.scrollY > 50) {
       navBar.classList.add("navbarScroll");
-      console.log("hej");
     }
     if (window.scrollY < 50) {
         navBar.classList.remove("navbarScroll");
-        console.log("hej");
       }
   }
 });
