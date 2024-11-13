@@ -1,5 +1,7 @@
 const navBar = document.getElementById("navbar");
 const aboutMeImg = document.getElementById("about_me_img");
+const workSection =document.querySelector(".work_section");
+
 const darkmodeButton = document.getElementById("darkmode");
 const darkmodeButtonButton = document.querySelector(".darkmode_button");
 
@@ -17,11 +19,16 @@ window.addEventListener("scroll", function () {
   }
 });
 
-darkmodeButton.addEventListener("click", function () {
-  console.log("hej");
-  darkmodeButton.style.justifyContent = "flex-end";
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 400) {
+    console.log("scrolla");
+    workSection.classList.add("work_section_animation");
+  }
+  if (window.scrollY < 400) {
+    console.log("scrolla");
+    workSection.classList.remove("work_section_animation");
+  }
 });
-
 
 selfie.addEventListener("mouseover", function () {
   if (document.documentElement.clientWidth >= 800) {
@@ -30,3 +37,10 @@ selfie.addEventListener("mouseover", function () {
   }
   
 });
+
+darkmodeButton.addEventListener("click", function () {
+  console.log("hej");
+  darkmodeButton.style.justifyContent = "flex-end";
+});
+
+
