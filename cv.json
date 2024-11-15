@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "title": "Shift Leader",
+      "companyName": "ICA",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "fulltime": "Full Time",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Shift Leader",
+      "companyName": "Pizza Hut",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "fulltime": "Full Time",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Lokalvårdare",
+      "companyName": "Copia Revision AB",
+      "location": "Stockholm",
+      "time": "2016 - Present",
+      "fulltime": "Part Time",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    }
+  ],
+  "education": [
+    {
+      "title": "Fullstack Developer JavaScript",
+      "schoolName": "Chas Academy",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "educationLevel" : "Yrkeshögskola",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Stylist",
+      "schoolName": "Realgymnasiet",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "educationLevel" : "Gymnasium",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Grundskola",
+      "schoolName": "Skärgårdstadsskolan",
+      "location": "Stockholm",
+      "time": "2016 - Present",
+      "educationLevel" : "Grundskola",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    }
+  ]
+}
