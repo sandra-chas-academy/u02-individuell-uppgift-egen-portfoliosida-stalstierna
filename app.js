@@ -1,6 +1,7 @@
 const navBar = document.getElementById("navbar");
 const aboutMeImg = document.getElementById("about_me_img");
 const workSection =document.querySelector(".work_section");
+const educationSection =document.querySelector(".education_section");
 
 const darkmodeButton = document.getElementById("darkmode");
 const darkmodeButtonButton = document.querySelector(".darkmode_button");
@@ -27,6 +28,17 @@ window.addEventListener("scroll", function() {
   if (window.scrollY < 400) {
     console.log("scrolla");
     workSection.classList.remove("work_section_animation");
+  }
+});
+
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 700) {
+    console.log("scrolla");
+    educationSection.classList.add("education_section_animation");
+  }
+  if (window.scrollY < 700) {
+    console.log("scrolla");
+    educationSection.classList.remove("education_section_animation");
   }
 });
 
