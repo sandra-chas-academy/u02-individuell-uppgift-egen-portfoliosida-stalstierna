@@ -9,11 +9,11 @@ const selfie = document.querySelector(".home_img");
 const homeText = document.querySelector(".home_text");
 
 window.addEventListener("scroll", function () {
-  if (document.documentElement.clientWidth >= 800) {
+  if (document.documentElement.clientWidth >= 700) {
     if (window.scrollY > 50) {
       navBar.classList.add("navbarScroll");
     }
-    if (window.scrollY < 50) {
+    else if (window.scrollY < 50) {
         navBar.classList.remove("navbarScroll");
       }
   }
@@ -31,7 +31,7 @@ window.addEventListener("scroll", function() {
 });
 
 selfie.addEventListener("mouseover", function () {
-  if (document.documentElement.clientWidth >= 800) {
+  if (document.documentElement.clientWidth >= 700) {
     homeText.classList.add("home_animation");
     console.log("aaaa");
   }
