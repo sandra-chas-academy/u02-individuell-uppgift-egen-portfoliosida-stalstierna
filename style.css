@@ -172,9 +172,10 @@ li a:hover {
 .work_experience,
 .education_experience {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   border-bottom: 2px solid black;
 }
 
@@ -183,6 +184,39 @@ li a:hover {
   font-size: 1rem;
   font-weight: 600;
   padding: 5px 0;
+}
+
+.work_experience_top, .education_experience_top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.work_experience_bottom,.education_experience_bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show_more_btn{
+  text-align: center;
+  transform: rotate(90deg);
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: -0.5rem;
+}
+
+.work_experience_description, .education_description{
+display: none;
+padding-top: 1rem;
+}
+
+.displayDescription{
+  display: block;
+}
+
+.left_side{
 }
 
 .right_side {
@@ -233,6 +267,10 @@ li a:hover {
 
 .education_section_animation {
   transform: translateX(0%);
+}
+
+.show_more_btn{
+
 }
 
 .section_projects {

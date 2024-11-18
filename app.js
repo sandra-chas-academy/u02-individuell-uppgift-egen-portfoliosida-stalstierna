@@ -11,7 +11,6 @@ const darkmodeButtonButton = document.querySelector(".darkmode_button");
 const selfie = document.querySelector(".home_img");
 const homeText = document.querySelector(".home_text");
 
-
 async function cvFile() {
   const response = await fetch('./cv.json');
   const data = await response.json();
@@ -21,7 +20,8 @@ async function cvFile() {
   data.jobs.forEach(job => {
     const work = document.createElement("div");
     work.innerHTML = ` <div class="work_experience">
-                          <div>
+                          <div class="work_experience_top">
+                          <div class="left_side">
                             <h3>${job.title}</h3>
                             <p>${job.companyName}</p>
                             <p>${job.location}</p>
@@ -30,24 +30,35 @@ async function cvFile() {
                             <p class="work_button">${job.fulltime}</p>
                             <p>${job.time}</p>
                           </div>
-                        </div>`
+                          </div>
+                          <div class="work_experience_bottom">
+                          <p class="work_experience_description">${job.description}</p>
+                          <button class="show_more_btn">&#10095</button>
+                          </div>
+                        </div>`;
           
     workSection.appendChild(work);
   });
 
   data.education.forEach(item => {
     const education = document.createElement("div");
-    education.innerHTML = ` <div class="work_experience">
-                          <div>
-                            <h3>${item.title}</h3>
-                            <p>${item.schoolName}</p>
-                            <p>${item.location}</p>
+    education.innerHTML = ` <div class="education_experience">
+                              <div class="education_experience_top">
+                                <div class="left_side">
+                                  <h3>${item.title}</h3>
+                                  <p>${item.schoolName}</p>
+                                  <p>${item.location}</p>
+                                </div>
+                                <div class="right_side">
+                                  <p class="education_button">${item.educationLevel}</p>
+                                  <p>${item.time}</p>
+                                </div>
+                             </div>
+                          <div class="education_experience_bottom">
+                          <p class="education_description">${item.description}</p>
+                          <button class="show_more_btn">&#10095</button>
                           </div>
-                          <div class="right_side">
-                            <p class="work_button">${item.educationLevel}</p>
-                            <p>${item.time}</p>
-                          </div>
-                        </div>`
+                        </div>`;
           
     educationSection.appendChild(education);
   });
@@ -97,4 +108,13 @@ darkmodeButton.addEventListener("click", function () {
   darkmodeButton.style.justifyContent = "flex-end";
 });
 
+
+// const showMoreBtn = document.querySelectorAll(".show_more_btn");
+// const workExperienceDes = document.querySelector(".work_experience_description");
+// const educationDes = document.querySelector("education_description");
+
+// showMoreBtn.addEventListener("click", function(e){
+//   workExperienceDes.classList.toggle("displayDescription");
+//   // educationDes.classList.toggle("displayDescription");
+//   });
 
