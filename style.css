@@ -99,6 +99,12 @@ li a:hover {
   margin-bottom: 2rem;
   padding: 10px;
   box-shadow: 0px 0px 20px #624050;
+  pointer-events: none;
+  transition: transform 2s;
+}
+
+.home_img:hover {
+  transform: rotate(120deg)
 }
 
 .selfie {
@@ -106,6 +112,12 @@ li a:hover {
   width: 300px;
   height: 300px;
   object-fit: cover;
+  pointer-events: all;
+  transition: transform 2s;
+}
+
+.selfie:hover{
+  transform: rotate(-120deg)
 }
 
 .home_text {
@@ -204,7 +216,14 @@ li a:hover {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-top: -0.5rem;
+  margin-top: -1rem;
+  padding: 5px 0px 5px 5px;
+}
+
+.show_more_btn:hover {
+  font-size: 1.5rem;
+  position: relative;
+  top: 2px;
 }
 
 .work_experience_description, .education_description{
@@ -214,6 +233,17 @@ padding-top: 1rem;
 
 .displayDescription{
   display: block;
+}
+
+.displayDescription_btn{
+  transform: rotate(270deg);
+  margin-top: -0.5rem;
+  padding: 5px 5px 5px 0px;
+}
+
+.displayDescription_btn:hover{
+  position: relative;
+  top: -2px
 }
 
 .left_side{
@@ -267,10 +297,6 @@ padding-top: 1rem;
 
 .education_section_animation {
   transform: translateX(0%);
-}
-
-.show_more_btn{
-
 }
 
 .section_projects {
@@ -347,16 +373,77 @@ padding-top: 1rem;
   margin-left: 2rem;
   cursor: pointer;
   transition: 0.3s;
+  color: #8361719d;
 }
 
 .project_arrow:hover {
-  opacity: 70%;
+  color: #624050;
   font-size: 2.7rem;
-  text-shadow: 0px 0px 5px #000000b2;
-  transition: 0.3s;
+  /* text-shadow: 0px 0px 5px #624050; */
+  transition: 0.5s;
+}
+
+.go_up{
+  display: none;
 }
 
 footer {
+  background-color: #1e1e1e;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #000;
+  z-index: 1;
+  margin-bottom: 4rem;
+}
+
+.contact_info img {
+  width: 20px;
+  height: auto;
+}
+
+.contact_info ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-left: 10px;
+  width: 300px;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.contact_info li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social_media img {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.social_media img:hover {
+  width: 28px;
+  cursor: pointer;
+  opacity: 80%;
+  transform: rotate(10deg);
+}
+
+.social_media {
+  /* background-color: #766c6c; */
+  height: 40px;
+  width: 90px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.speech_bubble{
   display: none;
 }
 
@@ -444,6 +531,26 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 15vh;
+  }
+
+  .speech_bubble{
+    display: block;
+    position: absolute;
+    left: 38vw;
+    top: 8vh;
+    z-index: 6; 
+  }
+
+  .speech_bubble img{
+    width: 200px;
+  }
+
+  .speech_bubble_text{
+  font-size: 1.5rem;
+   position: relative;
+   right: 5px;
+   bottom: 125px;
+   text-align: center;
   }
 
   .home_img {
@@ -570,59 +677,8 @@ footer {
     color: #fff;
   }
 
-  footer {
-    background-color: #1e1e1e;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    padding: 10px;
-    box-shadow: 0px 0px 10px #000;
-    z-index: 1;
-  }
-
-  .contact_info img {
-    width: 20px;
-    height: auto;
-  }
-
-  .contact_info ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    margin-left: 10px;
-    width: 300px;
-    color: #ffffff;
-    font-size: 0.8rem;
-  }
-
-  .contact_info li {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .social_media img {
-    width: 25px;
-    height: auto;
-    cursor: pointer;
-    transition: 0.5s;
-  }
-
-  .social_media img:hover {
-    width: 28px;
-    cursor: pointer;
-    opacity: 80%;
-    transform: rotate(10deg);
-  }
-
-  .social_media {
-    /* background-color: #766c6c; */
-    height: 40px;
-    width: 90px;
-    display: flex;
-    justify-content: space-around;
+  footer{
+    margin-bottom: 0;
   }
 }
 

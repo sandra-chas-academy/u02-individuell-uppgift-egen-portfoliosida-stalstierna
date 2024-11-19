@@ -11,11 +11,13 @@ const darkmodeButtonButton = document.querySelector(".darkmode_button");
 const selfie = document.querySelector(".home_img");
 const homeText = document.querySelector(".home_text");
 
+const speechBubble = document.querySelector(".speech_bubble");
+
+cvFile()
+
 async function cvFile() {
   const response = await fetch('./cv.json');
   const data = await response.json();
-
-  console.log(data)
 
   data.jobs.forEach(job => {
     const work = document.createElement("div");
@@ -62,9 +64,17 @@ async function cvFile() {
           
     educationSection.appendChild(education);
   });
+
+  const showMoreBtn = document.querySelectorAll(".show_more_btn");
+
+  showMoreBtn.forEach(btn => {
+    btn.addEventListener("click", function(){
+      btn.previousElementSibling.classList.toggle("displayDescription");
+      btn.classList.toggle("displayDescription_btn");
+    });
+});
 };
 
-cvFile()
 
 window.addEventListener("scroll", function () {
   if (document.documentElement.clientWidth >= 700) {
@@ -98,6 +108,7 @@ window.addEventListener("scroll", function() {
 selfie.addEventListener("mouseover", function () {
   if (document.documentElement.clientWidth >= 700) {
     homeText.classList.add("home_animation");
+    speechBubble.style.display = "none";
     console.log("aaaa");
   }
   
@@ -107,14 +118,4 @@ darkmodeButton.addEventListener("click", function () {
   console.log("hej");
   darkmodeButton.style.justifyContent = "flex-end";
 });
-
-
-// const showMoreBtn = document.querySelectorAll(".show_more_btn");
-// const workExperienceDes = document.querySelector(".work_experience_description");
-// const educationDes = document.querySelector("education_description");
-
-// showMoreBtn.addEventListener("click", function(e){
-//   workExperienceDes.classList.toggle("displayDescription");
-//   // educationDes.classList.toggle("displayDescription");
-//   });
 
