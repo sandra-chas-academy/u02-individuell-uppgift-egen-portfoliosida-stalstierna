@@ -2,6 +2,7 @@ const navBar = document.getElementById("navbar");
 const aboutMeImg = document.getElementById("about_me_img");
 const workSection =document.querySelector(".work_section");
 const educationSection =document.querySelector(".education_section");
+const allProjects = document.querySelector(".all_projects");
 
 const workExperience =document.querySelector(".work_experience");
 
@@ -14,10 +15,27 @@ const homeText = document.querySelector(".home_text");
 const speechBubble = document.querySelector(".speech_bubble");
 
 cvFile()
+showCV()
+projectFile()
+showProjects()
 
 async function cvFile() {
-  const response = await fetch('./cv.json');
-  const data = await response.json();
+  try {
+    const response = await fetch('./cv.json');
+
+    if(!response.ok) {
+        throw new Error("HTTP ERROR status: " + response.status);
+    }
+    const data = await response.json();
+    return data;
+
+}catch(error){
+    console.error(error);
+}
+}
+
+async function showCV() {
+  const data = await cvFile();
 
   data.jobs.forEach(job => {
     const work = document.createElement("div");
@@ -75,6 +93,41 @@ async function cvFile() {
 });
 };
 
+async function projectFile() {
+  try {
+    const response = await fetch('https://api.github.com/users/stalstierna/repos');
+
+    if(!response.ok) {
+        throw new Error("HTTP ERROR status: " + response.status);
+    }
+    const data = await response.json();
+    return data;
+
+}catch(error){
+    console.error(error);
+}
+}
+
+async function showProjects () {
+  
+const data = await projectFile()
+
+ data.forEach(item => {
+  // const articleproject = document.createElement("article");
+  // articleproject.classList.add("project");
+
+ allProjects.innerHTML += `<article class="project">
+                              <div class="project_img"><img src="img/rock-paper-scissor.png" alt=""></div>
+                              <div class="project_info">
+                                <h3>${item.name}</h3>
+                                <p class="project_text">${item.description}</p>
+                                <a class="project_arrow" href="${item.html_url}">&#10095</a>
+                              </div>
+                              </article>`;
+
+  });
+  console.log(data);
+}
 
 window.addEventListener("scroll", function () {
   if (document.documentElement.clientWidth >= 700) {

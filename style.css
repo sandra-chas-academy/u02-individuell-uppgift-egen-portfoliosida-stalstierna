@@ -351,29 +351,36 @@ padding-top: 1rem;
 .project_info {
   margin: 1rem 1.5rem;
   align-self: flex-start;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   height: 120px;
 }
 
 .project_info h3 {
   width: 100%;
   font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .project_text {
-  width: 80%;
+  width: 230px;
+  height: 100px;
   line-height: 1.2rem;
 }
 
 .project_arrow {
   font-size: 2.5rem;
-  align-self: flex-end;
+  /* align-self: flex-end; */
   /* background-color: #948f8f; */
   margin-left: 2rem;
   cursor: pointer;
   transition: 0.3s;
   color: #8361719d;
+  text-decoration: none;
+  /* background-color: #1c1c1c; */
+  position: relative;
+  top: -65px;
+  left: 220px;
 }
 
 .project_arrow:hover {
