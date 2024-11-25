@@ -1,73 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <section class="firstPage" id="firstPage">
 
-      <nav id="navbar">
-        <ul>
-          <li><a href="#firstPage">Home</a></li>
-          <li><a href="#section_about_me">About Me</a></li>
-          <li><a href="#section_projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div id="darkmode_desktop"><div class="darkmode_button"></div></div>
-      </nav>
-      <div id="darkmode"><div class="darkmode_button"></div></div>
-      
-      <div class="speech_bubble">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <section class="firstPage" id="firstPage">
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="#firstPage">Home</a></li>
+        <li><a href="#section_about_me">About Me</a></li>
+        <li><a href="#section_projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div id="darkmode_desktop">
+        <div class="darkmode_button"></div>
+      </div>
+    </nav>
+    <div id="darkmode">
+      <div class="darkmode_button"></div>
+    </div>
+
+    <div class="speech_bubble">
       <img src="./img/speech-bubble-150981_1280.png" alt="">
       <p class="speech_bubble_text">Hover <br> over me!</p>
-      </div>
+    </div>
 
-      <div class="home">
-        <div class="home_img">
-          <img class="selfie" src="img/pexels-moose-photos-170195-1036623.jpg" alt="a picture of me"/>
-        </div>
-        <div class="home_text">
-          <h1 class="home_text_h1">Hi, I'm Andréa</h1>
-          <h2 class="home_text__h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, suscipit.</h2>
-        </div>
-        <p class="home_arrow">&#10552; <span class="arrow_transition"></span></p>
+    <div class="home">
+      <div class="home_img">
+        <img class="selfie" src="img/pexels-moose-photos-170195-1036623.jpg" alt="a picture of me" />
       </div>
-    </section>
+      <div class="home_text">
+        <h1 class="home_text_h1">Hi, I'm Andréa</h1>
+        <h2 class="home_text__h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, suscipit.</h2>
+      </div>
+      <p class="home_arrow">&#10552; <span class="arrow_transition"></span></p>
+    </div>
+  </section>
 
-    <section class="section_about_me" id="section_about_me">
+  <section class="section_about_me" id="section_about_me">
 
     <div class="work_div">
       <h3 class="work_experience_title">Work Experience</h3>
       <article class="work_section">
         <!-- <div class="work_experience">
-          <div>
-            <h3>Restaurang</h3>
-            <p>Pizza Hut</p>
-            <p>Stockholm</p>
-          </div>
-          <div class="right_side">
-            <p class="work_button">Full Time</p>
-            <p>Sep 21 - Sep 23</p>
-          </div>
-        </div>
-
-        <div class="work_experience">
-          <div>
-            <h3>Restaurang</h3>
-            <p>Pizza Hut</p>
-            <p>Stockholm</p>
-          </div>
-          <div class="right_side">
-            <p class="work_button">Full Time</p>
-            <p>Sep 21 - Sep 23</p>
-          </div>
-        </div>
-
-        <div class="work_experience">
           <div>
             <h3>Restaurang</h3>
             <p>Pizza Hut</p>
@@ -94,90 +76,80 @@
             <p class="education_button">Full Time</p>
             <p>Sep 21 - Sep 23</p>
           </div>
-        </div>
-
-        <div class="education_experience">
-          <div>
-            <h3>Restaurang</h3>
-            <p>Pizza Hut</p>
-            <p>Stockholm</p>
-          </div>
-          <div class="right_side">
-            <p class="education_button">Full Time</p>
-            <p>Sep 21 - Sep 23</p>
-          </div>
-        </div>
-
-        <div class="education_experience">
-          <div>
-            <h3>Restaurang</h3>
-            <p>Pizza Hut</p>
-            <p>Stockholm</p>
-          </div>
-          <div class="right_side">
-            <p class="education_button">Full Time</p>
-            <p>Sep 21 - Sep 23</p>
-          </div>
         </div> -->
       </article>
-    </div>
-     
-    </section>
-
-    <section class="section_projects" id="section_projects">
-      <h2 class="projects_heading">My Projects</h2>
-
-      <div class="all_projects">
-
-        <article class="project">
-          <div class="project_img"><img src="img/rock-paper-scissor.png" alt=""></div>
-          <div class="project_info">
-            <h3>Rock Paper Scissor</h3>
-            <p class="project_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, recusandae.</p>
-            <p class="project_arrow">&#10095</p>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project_img"><img src="img/svenska-artister.png" alt=""></div>
-          <div class="project_info"></div>
-        </article>
-
-        <article class="project">
-          <div class="project_img"><img src="img/todos.png" alt=""></div>
-          <div class="project_info"></div>
-        </article>
-
-        <article class="project">
-          <div class="project_img"><img src="img/bakgrundsfarg.png" alt=""></div>
-          <div class="project_info"></div>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="go_up">
-    <div class="footer_arrow">
-      <a href="#firstPage">&#10094</a>
     </div>
 
   </section>
 
-    <footer id="contact">
+  <section class="section_projects" id="section_projects">
+    <h2 class="projects_heading">My Projects</h2>
 
-      <div class="contact_info">
-        <ul>
-         <li><img src="img/contact-map-pin-svgrepo-com.svg" alt=""><span class="contact_me">Stockholm</span></li>
-         <li><img src="img/contact-phone-2-svgrepo-com.svg" alt=""><span class="contact_me">070-232 54 30</span></li>
-         <li><img src="img/contact-mail-svgrepo-com.svg" alt=""><span class="contact_me">andrea.stalstierna@chasacademy.se</span></li>
-        </ul>
-      </div>
-      
-        <div class="social_media">
-          <img src="img/github-142-svgrepo-com.svg" alt="">
-          <img src="img/linkedin-161-svgrepo-com.svg" alt="">
+    <div class="all_projects">
+
+      <article class="project">
+        <div class="project_img"><img src="img/rock-paper-scissor.png" alt=""></div>
+        <div class="project_info">
+          <h3>Rock Paper Scissor</h3>
+          <p class="project_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, recusandae.</p>
+          <p class="project_arrow">&#10095</p>
         </div>
-  
-    </footer>
-  </body>
+      </article>
+
+      <article class="project">
+        <div class="project_img"><img src="img/svenska-artister.png" alt=""></div>
+        <div class="project_info"></div>
+      </article>
+
+      <article class="project">
+        <div class="project_img"><img src="img/todos.png" alt=""></div>
+        <div class="project_info"></div>
+      </article>
+
+      <article class="project">
+        <div class="project_img"><img src="img/bakgrundsfarg.png" alt=""></div>
+        <div class="project_info"></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="go_up">
+    <div class="footer_arrow">
+      <a href="#firstPage">&#10094</a>
+    </div>
+  </section>
+
+  <footer id="contact">
+
+    <div class="contact_info">
+      <ul>
+        <li><img src="img/contact-map-pin-svgrepo-com.svg" alt=""><span class="contact_me">Stockholm</span></li>
+        <li><img src="img/contact-phone-2-svgrepo-com.svg" alt=""><span class="contact_me">070-232 54 30</span></li>
+        <li><img src="img/contact-mail-svgrepo-com.svg" alt=""><span
+            class="contact_me">andrea.stalstierna@chasacademy.se</span></li>
+      </ul>
+    </div>
+
+    <div class="social_media">
+      <img src="img/github-142-svgrepo-com.svg" alt="">
+      <img src="img/linkedin-161-svgrepo-com.svg" alt="">
+    </div>
+
+  </footer>
+</body>
+
 </html>
+
+<!-- <dialog open class="dialog_modal">
+  <div class="modal">
+    <div class="modal_img"><img src="img/rock-paper-scissor.png" alt=""></div>
+      <div class="modal_info">
+        <h3>Rock Paper Scissor</h3>
+        <p class="modal_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore magnam facilis similique ipsum consequuntur veritatis, delectus animi expedita facere reiciendis sequi illo nostrum, obcaecati, vel quidem praesentium asperiores optio temporibus.</p>
+      <div class="modal_git">
+        <img src="img/github-142-svgrepo-com.svg" alt="">
+      </div>
+      </div>
+  </div>
+</dialog> -->
