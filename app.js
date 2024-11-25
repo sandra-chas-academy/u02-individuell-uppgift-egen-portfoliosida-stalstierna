@@ -109,15 +109,19 @@ async function projectFile() {
 }
 
 async function showProjects () {
-  
+
 const data = await projectFile()
+const projectImg = await cvFile()
+const imgobj = projectImg.images
+console.log(imgobj)
 
  data.forEach(item => {
-  // const articleproject = document.createElement("article");
-  // articleproject.classList.add("project");
+
+  const result = imgobj.find(obj => obj.id === item.id);
+  const image = result.imageURL
 
  allProjects.innerHTML += `<article class="project">
-                              <div class="project_img"><img src="img/rock-paper-scissor.png" alt=""></div>
+                              <div class="project_img"><img src="${image}" alt=""></div>
                               <div class="project_info">
                                 <h3>${item.name}</h3>
                                 <p class="project_text">${item.description}</p>
@@ -126,7 +130,8 @@ const data = await projectFile()
                               </article>`;
 
   });
-  console.log(data);
+
+  console.log(data)
 }
 
 window.addEventListener("scroll", function () {
@@ -171,4 +176,3 @@ darkmodeButton.addEventListener("click", function () {
   console.log("hej");
   darkmodeButton.style.justifyContent = "flex-end";
 });
-

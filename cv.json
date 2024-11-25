@@ -50,5 +50,16 @@
       "educationLevel" : "Grundskola",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
     }
+  ],
+  "images": [
+      {"id": 893828365, "imageURL": "img/bakgrundsfarg.png"},
+      {"id": 893827959, "imageURL": "img/svenska-artister.png"},
+      {"id": 893827008, "imageURL": "img/rock-paper-scissor.png"},
+      {"id": 889453372, "imageURL": "img/weather-app.png"},
+      {"id": 878388016, "imageURL": "img/todos.png"},
+      {"id": 893826261, "imageURL": "img/memory.png"},
+      {"id": 885557297, "imageURL": "img/pokemon.png"},
+      {"id": 887282440, "imageURL": "img/radioplayer.png"}   
+    
   ]
 }
