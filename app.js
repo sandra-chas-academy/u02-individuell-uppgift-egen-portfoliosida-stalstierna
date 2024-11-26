@@ -179,7 +179,7 @@ selfie.addEventListener("mouseover", function () {
 darkmodeButton.addEventListener("click", function () {
   darkmodeButton.classList.toggle("darkmode_flex");
   body.classList.toggle("light_mode");
-  contactInfo.classList.toggle("contact_info_filter");
+  // contactInfo.classList.toggle("contact_info_filter");
   socialMedia.classList.toggle("contact_info_filter");
 
   if (darkmodeButton.classList.contains("darkmode_flex")){
@@ -194,7 +194,7 @@ darkmodeButton.addEventListener("click", function () {
 darkmodeButtonDesktop.addEventListener("click", function () {
   darkmodeButtonDesktop.classList.toggle("darkmode_flex");
   body.classList.toggle("light_mode");
-  contactInfo.classList.toggle("contact_info_filter");
+  // contactInfo.classList.toggle("contact_info_filter");
   socialMedia.classList.toggle("contact_info_filter");
 
   if (darkmodeButtonDesktop.classList.contains("darkmode_flex")){
