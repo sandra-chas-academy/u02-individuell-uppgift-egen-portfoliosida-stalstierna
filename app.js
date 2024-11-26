@@ -6,8 +6,12 @@ const allProjects = document.querySelector(".all_projects");
 
 const workExperience =document.querySelector(".work_experience");
 
-const darkmodeButton = document.getElementById("darkmode");
-const darkmodeButtonButton = document.querySelector(".darkmode_button");
+const darkmodeButton = document.querySelector(".darkmode");
+const darkmodeButtonDesktop = document.querySelector(".darkmode_desktop");
+const body = document.querySelector("body");
+const contactInfo = document.querySelector(".contact_info");
+const socialMedia = document.querySelector(".social_media")
+// const darkmodeButtonButton = document.querySelector(".darkmode_button");
 
 const selfie = document.querySelector(".home_img");
 const homeText = document.querySelector(".home_text");
@@ -173,6 +177,30 @@ selfie.addEventListener("mouseover", function () {
 });
 
 darkmodeButton.addEventListener("click", function () {
-  console.log("hej");
-  darkmodeButton.style.justifyContent = "flex-end";
+  darkmodeButton.classList.toggle("darkmode_flex");
+  body.classList.toggle("light_mode");
+  contactInfo.classList.toggle("contact_info_filter");
+  socialMedia.classList.toggle("contact_info_filter");
+
+  if (darkmodeButton.classList.contains("darkmode_flex")){
+    darkmodeButtonDesktop.classList.add("darkmode_flex");
+  }
+  else{
+    darkmodeButtonDesktop.classList.remove("darkmode_flex");
+  }
+ 
+});
+
+darkmodeButtonDesktop.addEventListener("click", function () {
+  darkmodeButtonDesktop.classList.toggle("darkmode_flex");
+  body.classList.toggle("light_mode");
+  contactInfo.classList.toggle("contact_info_filter");
+  socialMedia.classList.toggle("contact_info_filter");
+
+  if (darkmodeButtonDesktop.classList.contains("darkmode_flex")){
+    darkmodeButton.classList.add("darkmode_flex");
+  }
+  else{
+    darkmodeButton.classList.remove("darkmode_flex");
+  }
 });

@@ -11,6 +11,11 @@
 --dark-work-background-desktop: #ffffff10;
 --dark-projectcard-background: #ffffff30;
 --dark-black-text: #000;
+--darkmode-button-background-light: rgba(202,204,204,1);
+--darkmode-button-background-medium: rgba(143,143,158,1);
+--darkmode-button-background-dark: rgba(31,31,31,1);
+--darkmode-button: rgba(31,31,31,1);
+--darkmode-button-border: #000;
 --white: #fff;
 --black: #000;
 }
@@ -28,6 +33,11 @@
   --dark-work-background-desktop: #ffffff30;
   --dark-projectcard-background: #ffffff74;
   --dark-black-text: #fff;
+  --darkmode-button: #ffea2e;
+  --darkmode-button-border: #ffae00;
+  --darkmode-button-background-light: rgb(124, 135, 255);
+  --darkmode-button-background-medium: rgb(211, 214, 255);
+  --darkmode-button-background-dark: rgb(255, 255, 255);
 }
 
 /* #e6d6d6 0%, 
@@ -86,11 +96,11 @@ li a:hover {
   opacity: 70%;
 }
 
-#darkmode {
+.darkmode {
   width: 60px;
   height: 30px;
   border-radius: 50px;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(273deg, var(--darkmode-button-background-dark) 0%, var(--darkmode-button-background-medium) 51%, var(--darkmode-button-background-light) 100%);
   border: 2px solid #999999;
   position: absolute;
   top: 2rem;
@@ -102,8 +112,14 @@ li a:hover {
   box-shadow: 0px 0px 10px #ffffff50;
 }
 
+.darkmode_flex{
+  justify-content: flex-end;
+}
+
 .darkmode_button {
-  background-color: var(--black);
+  background: radial-gradient(circle, var(--darkmode-button) 20%, var(--darkmode-button-border) 100%);
+  background-color: var(--darkmode-button);
+  border: 3px solid var(--darkmode-button-border);
   border-radius: 50px;
   width: 27px;
   height: 27px;
@@ -510,6 +526,10 @@ footer {
   margin-bottom: 4rem;
 }
 
+.contact_info_filter{
+  filter: brightness(0);
+}
+
 .contact_info img {
   width: 20px;
   height: auto;
@@ -613,11 +633,11 @@ footer {
     text-shadow: 0px 0px 5px var(--white);
   }
 
-  #darkmode_desktop {
+  .darkmode_desktop {
     width: 60px;
     height: 30px;
     border-radius: 50px;
-    background-color: var(--white);
+    background: linear-gradient(273deg, var(--darkmode-button-background-dark) 0%, var(--darkmode-button-background-medium) 51%, var(--darkmode-button-background-light) 100%);
     border: 2px solid #999999;
     position: absolute;
     top: 1rem;
@@ -629,6 +649,10 @@ footer {
     box-shadow: 0px 0px 10px var(--dark-black-text);
   }
 
+  .darkmode_flex{
+    justify-content: flex-end;
+  }
+
   .darkmode_button {
     background-color: var(--black);
     border-radius: 50px;
@@ -636,7 +660,7 @@ footer {
     height: 27px;
   }
 
-  #darkmode {
+  .darkmode {
     display: none;
   }
 
