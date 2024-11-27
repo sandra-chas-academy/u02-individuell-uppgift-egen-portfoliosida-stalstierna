@@ -14,7 +14,7 @@ const socialMedia = document.querySelector(".social_media")
 // const darkmodeButtonButton = document.querySelector(".darkmode_button");
 
 const selfie = document.querySelector(".home_img");
-const homeText = document.querySelector(".home_text");
+const homeText = document.querySelector(".home_text_h1");
 
 const speechBubble = document.querySelector(".speech_bubble");
 
@@ -26,6 +26,21 @@ showProjects()
 async function cvFile() {
   try {
     const response = await fetch('./cv.json');
+
+    if (!response.ok) {
+      throw new Error("HTTP ERROR status: " + response.status);
+    }
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function projectFile() {
+  try {
+    const response = await fetch('https://api.github.com/users/stalstierna/repos');
 
     if (!response.ok) {
       throw new Error("HTTP ERROR status: " + response.status);
@@ -97,21 +112,6 @@ async function showCV() {
   });
 };
 
-async function projectFile() {
-  try {
-    const response = await fetch('https://api.github.com/users/stalstierna/repos');
-
-    if (!response.ok) {
-      throw new Error("HTTP ERROR status: " + response.status);
-    }
-    const data = await response.json();
-    return data;
-
-  } catch (error) {
-    console.error(error);
-  }
-}
-
 async function showProjects() {
 
   const data = await projectFile()
@@ -135,42 +135,39 @@ async function showProjects() {
                               </article>`;
 
   });
+}
 
+window.addEventListener("scroll", function() {
   const loadingBar = document.querySelectorAll(".loading_bar");
   const projectImage = document.querySelectorAll(".project_img");
   const projectInfo = document.querySelectorAll(".project_info");
+  let barTime = 3000;
+  let imgTime = 3000;
+  let infoTime = 3000;
 
-  window.addEventListener("scroll", function () {
-    let barTime = 3000;
-    let imgTime = 3000;
-    let infoTime = 3000;
+  if (window.scrollY > 1000) {
+    loadingBar.forEach(bar => {
+      setTimeout(function () {
+        bar.style.display = "none";
+      }, barTime)
+      barTime += 300;
+    })
 
-    if (window.scrollY > 1000) {
-      loadingBar.forEach(bar => {
-        setTimeout(function () {
-          bar.style.display = "none";
-        }, barTime)
-        barTime += 300;
-      })
+    projectImage.forEach(img => {
+      setTimeout(function () {
+        img.style.display = "block";
+      }, imgTime)
+      imgTime += 300;
+    })
 
-      projectImage.forEach(img => {
-        setTimeout(function () {
-          img.style.display = "block";
-        }, imgTime)
-        imgTime += 300;
-      })
-
-      projectInfo.forEach(info => {
-        setTimeout(function () {
-          info.style.display = "block";
-        }, infoTime)
-        infoTime += 300;
-      })
-    }
-  })
-
-}
-
+    projectInfo.forEach(info => {
+      setTimeout(function () {
+        info.style.display = "block";
+      }, infoTime)
+      infoTime += 300;
+    })
+  }
+})
 
 window.addEventListener("scroll", function () {
   if (document.documentElement.clientWidth >= 700) {
@@ -205,7 +202,9 @@ selfie.addEventListener("mouseover", function () {
   if (document.documentElement.clientWidth >= 700) {
     homeText.classList.add("home_animation");
     speechBubble.style.display = "none";
-    console.log("aaaa");
+    homeText.childNodes.forEach(span => {
+      span.classList.add("home_animation");
+    });
   }
 
 });

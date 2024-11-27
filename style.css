@@ -748,19 +748,79 @@ footer {
     color: var( --dark-home-text-desktop);
     text-shadow: 0px 0px 25px var(--white);
     margin: 1rem;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: 1.5s ease-in;
-  }
-
-  .home_animation {
-    transform: translateX(0);
-    opacity: 100%;
-  }
+    /* transform: translateX(-350px); */
+    /* opacity: 0; */
+    transition: animation 1.5s ease-in;
+    position: relative;
+    left: 0px;
+  } 
 
   .home_text h1 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
+    position: relative;
+    left: -350px;
+    opacity: 0;
+  }
+
+   .home_animation{
+    animation-name: textanimation;
+    position: relative;
+    /* transition: 1.5s ease-in; */
+    opacity: 100%;
+    animation-fill-mode: forwards;
+   }
+
+   .home_animation:nth-child(12){
+    animation-duration: 1s;
+  }
+  .home_animation:nth-child(11){
+    animation-duration: 1.2s;
+  }
+  .home_animation:nth-child(10){
+    animation-duration: 1.4s;
+  }
+  .home_animation:nth-child(9){
+    animation-duration: 1.6s;
+  }
+  .home_animation:nth-child(8){
+    animation-duration: 1.8s;
+  }
+  .home_animation:nth-child(7){
+    animation-duration: 2s;
+  }
+  .home_animation:nth-child(6){
+    animation-duration: 2.2s;
+  }
+  .home_animation:nth-child(5){
+    animation-duration: 2.4s;
+  }
+  .home_animation:nth-child(4){
+    animation-duration: 2.6s;
+  }
+  .home_animation:nth-child(3){
+    animation-duration: 2.8s;
+  }
+  .home_animation:nth-child(2){
+    animation-duration: 3s;
+  }
+  .home_animation:nth-child(1){
+    animation-duration: 3.2s;
+  }
+
+  @keyframes textanimation {
+    0%{
+      left: -350px;
+      opacity: 0%;
+    }
+    50%{
+      left: 40px;
+      opacity: 50%;
+    }
+    100%{
+      left: 0px;
+      opacity: 100%;
+    }
   }
 
   .home_text h2 {
