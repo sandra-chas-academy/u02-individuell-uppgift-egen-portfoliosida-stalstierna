@@ -394,6 +394,26 @@ color: var(--dark-work-text);
   justify-content: space-evenly;
 }
 
+.loading_bar{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  /* border: 15px dotted rgb(0, 0, 0); */
+  border-right: 16px dotted #000000db;
+  border-top: 16px dotted #000000bc;
+  border-left: 16px dotted #00000085;
+  border-bottom: 16px dotted #00000046;
+  border-style:dotted;
+  position: absolute;
+  margin-top: 135px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .project {
   display: flex;
   flex-direction: column;
@@ -416,6 +436,7 @@ color: var(--dark-work-text);
   margin-top: 10px;
   border-radius: 15px;
   border: 1px solid var(--black);
+  display: none;
 }
 
 .section_projects img {
@@ -431,6 +452,7 @@ color: var(--dark-work-text);
   /* display: flex;
   flex-wrap: wrap; */
   height: 120px;
+  display: none;
 }
 
 .project_info h3 {

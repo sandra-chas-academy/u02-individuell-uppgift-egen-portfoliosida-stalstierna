@@ -1,10 +1,10 @@
 const navBar = document.getElementById("navbar");
 const aboutMeImg = document.getElementById("about_me_img");
-const workSection =document.querySelector(".work_section");
-const educationSection =document.querySelector(".education_section");
+const workSection = document.querySelector(".work_section");
+const educationSection = document.querySelector(".education_section");
 const allProjects = document.querySelector(".all_projects");
 
-const workExperience =document.querySelector(".work_experience");
+const workExperience = document.querySelector(".work_experience");
 
 const darkmodeButton = document.querySelector(".darkmode");
 const darkmodeButtonDesktop = document.querySelector(".darkmode_desktop");
@@ -27,15 +27,15 @@ async function cvFile() {
   try {
     const response = await fetch('./cv.json');
 
-    if(!response.ok) {
-        throw new Error("HTTP ERROR status: " + response.status);
+    if (!response.ok) {
+      throw new Error("HTTP ERROR status: " + response.status);
     }
     const data = await response.json();
     return data;
 
-}catch(error){
+  } catch (error) {
     console.error(error);
-}
+  }
 }
 
 async function showCV() {
@@ -60,7 +60,7 @@ async function showCV() {
                           <button class="show_more_btn">&#10095</button>
                           </div>
                         </div>`;
-          
+
     workSection.appendChild(work);
   });
 
@@ -83,48 +83,49 @@ async function showCV() {
                           <button class="show_more_btn">&#10095</button>
                           </div>
                         </div>`;
-          
+
     educationSection.appendChild(education);
   });
 
   const showMoreBtn = document.querySelectorAll(".show_more_btn");
 
   showMoreBtn.forEach(btn => {
-    btn.addEventListener("click", function(){
+    btn.addEventListener("click", function () {
       btn.previousElementSibling.classList.toggle("displayDescription");
       btn.classList.toggle("displayDescription_btn");
     });
-});
+  });
 };
 
 async function projectFile() {
   try {
     const response = await fetch('https://api.github.com/users/stalstierna/repos');
 
-    if(!response.ok) {
-        throw new Error("HTTP ERROR status: " + response.status);
+    if (!response.ok) {
+      throw new Error("HTTP ERROR status: " + response.status);
     }
     const data = await response.json();
     return data;
 
-}catch(error){
+  } catch (error) {
     console.error(error);
+  }
 }
-}
 
-async function showProjects () {
+async function showProjects() {
 
-const data = await projectFile()
-const projectImg = await cvFile()
-const imgobj = projectImg.images
-console.log(imgobj)
+  const data = await projectFile()
+  const projectImg = await cvFile()
+  const imgobj = projectImg.images
+  console.log(imgobj)
 
- data.forEach(item => {
+  data.forEach(item => {
 
-  const result = imgobj.find(obj => obj.id === item.id);
-  const image = result.imageURL
+    const result = imgobj.find(obj => obj.id === item.id);
+    const image = result.imageURL
 
- allProjects.innerHTML += `<article class="project">
+    allProjects.innerHTML += `<article class="project">
+                            <div class="loading_bar"></div>
                               <div class="project_img"><img src="${image}" alt=""></div>
                               <div class="project_info">
                                 <h3>${item.name}</h3>
@@ -135,8 +136,41 @@ console.log(imgobj)
 
   });
 
-  console.log(data)
+  const loadingBar = document.querySelectorAll(".loading_bar");
+  const projectImage = document.querySelectorAll(".project_img");
+  const projectInfo = document.querySelectorAll(".project_info");
+
+  window.addEventListener("scroll", function () {
+    let barTime = 3000;
+    let imgTime = 3000;
+    let infoTime = 3000;
+
+    if (window.scrollY > 1000) {
+      loadingBar.forEach(bar => {
+        setTimeout(function () {
+          bar.style.display = "none";
+        }, barTime)
+        barTime += 300;
+      })
+
+      projectImage.forEach(img => {
+        setTimeout(function () {
+          img.style.display = "block";
+        }, imgTime)
+        imgTime += 300;
+      })
+
+      projectInfo.forEach(info => {
+        setTimeout(function () {
+          info.style.display = "block";
+        }, infoTime)
+        infoTime += 300;
+      })
+    }
+  })
+
 }
+
 
 window.addEventListener("scroll", function () {
   if (document.documentElement.clientWidth >= 700) {
@@ -144,12 +178,12 @@ window.addEventListener("scroll", function () {
       navBar.classList.add("navbarScroll");
     }
     else if (window.scrollY < 50) {
-        navBar.classList.remove("navbarScroll");
-      }
+      navBar.classList.remove("navbarScroll");
+    }
   }
 });
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   if (window.scrollY > 400) {
     workSection.classList.add("work_section_animation");
   }
@@ -158,7 +192,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   if (window.scrollY > 700) {
     educationSection.classList.add("education_section_animation");
   }
@@ -173,7 +207,7 @@ selfie.addEventListener("mouseover", function () {
     speechBubble.style.display = "none";
     console.log("aaaa");
   }
-  
+
 });
 
 darkmodeButton.addEventListener("click", function () {
@@ -182,13 +216,13 @@ darkmodeButton.addEventListener("click", function () {
   // contactInfo.classList.toggle("contact_info_filter");
   socialMedia.classList.toggle("contact_info_filter");
 
-  if (darkmodeButton.classList.contains("darkmode_flex")){
+  if (darkmodeButton.classList.contains("darkmode_flex")) {
     darkmodeButtonDesktop.classList.add("darkmode_flex");
   }
-  else{
+  else {
     darkmodeButtonDesktop.classList.remove("darkmode_flex");
   }
- 
+
 });
 
 darkmodeButtonDesktop.addEventListener("click", function () {
@@ -197,10 +231,10 @@ darkmodeButtonDesktop.addEventListener("click", function () {
   // contactInfo.classList.toggle("contact_info_filter");
   socialMedia.classList.toggle("contact_info_filter");
 
-  if (darkmodeButtonDesktop.classList.contains("darkmode_flex")){
+  if (darkmodeButtonDesktop.classList.contains("darkmode_flex")) {
     darkmodeButton.classList.add("darkmode_flex");
   }
-  else{
+  else {
     darkmodeButton.classList.remove("darkmode_flex");
   }
 });
