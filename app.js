@@ -3,6 +3,7 @@ const aboutMeImg = document.getElementById("about_me_img");
 const workSection = document.querySelector(".work_section");
 const educationSection = document.querySelector(".education_section");
 const allProjects = document.querySelector(".all_projects");
+const loadingFetch = document.querySelector(".loading_fetch");
 
 const workExperience = document.querySelector(".work_experience");
 
@@ -15,13 +16,18 @@ const socialMedia = document.querySelector(".social_media")
 
 const selfie = document.querySelector(".home_img");
 const homeText = document.querySelector(".home_text_h1");
+const homeTexth2 = document.querySelector(".home_text_h2");
 
 const speechBubble = document.querySelector(".speech_bubble");
 
 cvFile()
 showCV()
 projectFile()
-showProjects()
+setTimeout(function () {
+  showProjects()
+}, 3000)
+
+
 
 async function cvFile() {
   try {
@@ -40,6 +46,7 @@ async function cvFile() {
 
 async function projectFile() {
   try {
+    loadingFetch.style.display = "block";
     const response = await fetch('https://api.github.com/users/stalstierna/repos');
 
     if (!response.ok) {
@@ -51,6 +58,9 @@ async function projectFile() {
   } catch (error) {
     console.error(error);
   }
+  //  finally {
+  //     loadingFetch.style.display = "none";
+  // }
 }
 
 async function showCV() {
@@ -119,6 +129,8 @@ async function showProjects() {
   const imgobj = projectImg.images
   console.log(imgobj)
 
+  loadingFetch.style.display = "none";
+
   data.forEach(item => {
 
     const result = imgobj.find(obj => obj.id === item.id);
@@ -141,9 +153,9 @@ window.addEventListener("scroll", function() {
   const loadingBar = document.querySelectorAll(".loading_bar");
   const projectImage = document.querySelectorAll(".project_img");
   const projectInfo = document.querySelectorAll(".project_info");
-  let barTime = 3000;
-  let imgTime = 3000;
-  let infoTime = 3000;
+  let barTime = 2000;
+  let imgTime = 2000;
+  let infoTime = 2000;
 
   if (window.scrollY > 1000) {
     loadingBar.forEach(bar => {
@@ -201,6 +213,7 @@ window.addEventListener("scroll", function () {
 selfie.addEventListener("mouseover", function () {
   if (document.documentElement.clientWidth >= 700) {
     homeText.classList.add("home_animation");
+    homeTexth2.classList.add("home_animation_h2");
     speechBubble.style.display = "none";
     homeText.childNodes.forEach(span => {
       span.classList.add("home_animation");
