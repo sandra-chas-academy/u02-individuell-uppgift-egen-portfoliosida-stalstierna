@@ -17,6 +17,7 @@ const socialMedia = document.querySelector(".social_media")
 const selfie = document.querySelector(".home_img");
 const homeText = document.querySelector(".home_text_h1");
 const homeTexth2 = document.querySelector(".home_text_h2");
+const homeArrow = document.querySelector(".home_arrow");
 
 const speechBubble = document.querySelector(".speech_bubble");
 
@@ -214,6 +215,7 @@ selfie.addEventListener("mouseover", function () {
   if (document.documentElement.clientWidth >= 700) {
     homeText.classList.add("home_animation");
     homeTexth2.classList.add("home_animation_h2");
+    homeArrow.classList.add("home_arrow_animation");
     speechBubble.style.display = "none";
     homeText.childNodes.forEach(span => {
       span.classList.add("home_animation");
