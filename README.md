@@ -15,3 +15,5 @@ JSON betyder JavaScript Object Notation och är ett datautbytesformat som använ
 
 4. 
 HTTP står för HyperText Transfer Protocol och är ett protokoll som används för att överföra data mellan klienter och servrar. Det är viktigt att kunna för en frontendutvecklare då det påverkar användarupplevelsen, eftersom det påverkar hur applikationen kommunicerar med servar och hur data hämtas och hanteras. Man måste därför ha kunskap om HTTP-metoderna! Det är också viktigt att kunna för att förstå statuskoder för att veta hur man ska hantera dessa. Sedan är det bra för felhanteringen då man måste förstå protokollet för att felsöka och hantera felet. Det är även bra att ha kunskap om HTTP för att hantera API-anrop, som man ofta gör som frontendutvecklare. Kunskap om HTTP är väldigt avgörande för att lyckas som en frontendutvecklare, och kunna bygga bra, effektiva och funktionella webbapplikationer.
+
+Netlify: https://polite-rabanadas-283167.netlify.app/
