@@ -121,10 +121,9 @@ async function showCV() {
 
 async function showProjects() {
 
-  const data = await projectFile()
-  const projectImg = await cvFile()
-  const imgobj = projectImg.images
-  console.log(imgobj)
+  const data = await projectFile();
+  const projectImg = await cvFile();
+  const imgobj = projectImg.images;
 
   loadingFetch.style.display = "none";
 
