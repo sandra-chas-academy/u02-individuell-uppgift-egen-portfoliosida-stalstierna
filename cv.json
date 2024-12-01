@@ -35,19 +35,19 @@
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
     },
     {
+      "title": "Komvux",
+      "schoolName": "NTI-skolan",
+      "location": "Stockholm",
+      "time": "2023 - 2024",
+      "educationLevel" : "Komvux",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
       "title": "Stylist",
       "schoolName": "Realgymnasiet",
       "location": "Stockholm",
       "time": "Sep 21 - Sep 22",
       "educationLevel" : "Gymnasium",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
-    },
-    {
-      "title": "Grundskola",
-      "schoolName": "Skärgårdstadsskolan",
-      "location": "Stockholm",
-      "time": "2016 - Present",
-      "educationLevel" : "Grundskola",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
     }
   ],

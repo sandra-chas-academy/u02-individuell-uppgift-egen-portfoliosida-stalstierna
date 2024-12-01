@@ -226,6 +226,7 @@ li a:hover {
 
 .work_section {
   width: 70%;
+  min-width: 300px;
   margin: 0 1rem;
   padding: 1rem;
   background-color: var(--dark-work-background);
@@ -345,6 +346,7 @@ color: var(--dark-work-text);
 
 .education_section {
   width: 70%;
+  min-width: 300px;
   margin: 0 1rem;
   padding: 1rem;
   background-color: var(--dark-work-background);
@@ -516,7 +518,6 @@ footer {
   align-items: flex-start;
   gap: 5px;
   margin-left: 10px;
-  width: 300px;
   color: #8a6576;
   font-size: 0.8rem;
 }
@@ -548,10 +549,6 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
-
-/* .social_media a{
-  text-decoration: none;
-} */
 
 .speech_bubble{
   display: none;
