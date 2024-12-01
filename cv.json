@@ -1,0 +1,66 @@
+{
+  "jobs": [
+    {
+      "title": "Shift Leader",
+      "companyName": "ICA",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "fulltime": "Full Time",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Shift Leader",
+      "companyName": "Pizza Hut",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "fulltime": "Full Time",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Lokalvårdare",
+      "companyName": "Copia Revision AB",
+      "location": "Stockholm",
+      "time": "2016 - Present",
+      "fulltime": "Part Time",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    }
+  ],
+  "education": [
+    {
+      "title": "Fullstack Developer JavaScript",
+      "schoolName": "Chas Academy",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "educationLevel" : "Yrkeshögskola",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Komvux",
+      "schoolName": "NTI-skolan",
+      "location": "Stockholm",
+      "time": "2023 - 2024",
+      "educationLevel" : "Komvux",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    },
+    {
+      "title": "Stylist",
+      "schoolName": "Realgymnasiet",
+      "location": "Stockholm",
+      "time": "Sep 21 - Sep 22",
+      "educationLevel" : "Gymnasium",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro consectetur, eveniet, in voluptatem nostrum a natus sequi sed, repellat perferendis voluptas assumenda quam aut eos? Incidunt rem sint doloremque!"
+    }
+  ],
+  "images": [
+      {"id": 893828365, "imageURL": "img/bakgrundsfarg.png"},
+      {"id": 893827959, "imageURL": "img/svenska-artister.png"},
+      {"id": 893827008, "imageURL": "img/rock-paper-scissor.png"},
+      {"id": 889453372, "imageURL": "img/weather-app.png"},
+      {"id": 878388016, "imageURL": "img/todos.png"},
+      {"id": 893826261, "imageURL": "img/memory.png"},
+      {"id": 885557297, "imageURL": "img/pokemon.png"},
+      {"id": 887282440, "imageURL": "img/radioplayer.png"},
+      {"id": 895455409, "imageURL": "img/quizzy.png"},
+      {"id": 896862231, "imageURL": "img/portfolio.png"}
+  ]
+}
