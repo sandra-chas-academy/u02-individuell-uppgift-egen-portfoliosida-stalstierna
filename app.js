@@ -12,7 +12,6 @@ const darkmodeButtonDesktop = document.querySelector(".darkmode_desktop");
 const body = document.querySelector("body");
 const contactInfo = document.querySelector(".contact_info");
 const socialMedia = document.querySelector(".social_media")
-// const darkmodeButtonButton = document.querySelector(".darkmode_button");
 
 const selfie = document.querySelector(".home_img");
 const homeText = document.querySelector(".home_text_h1");
@@ -59,9 +58,6 @@ async function projectFile() {
   } catch (error) {
     console.error(error);
   }
-  //  finally {
-  //     loadingFetch.style.display = "none";
-  // }
 }
 
 async function showCV() {
@@ -88,7 +84,7 @@ async function showCV() {
                         </div>`;
 
     workSection.appendChild(work);
-  });
+  })
 
   data.education.forEach(item => {
     const education = document.createElement("div");
@@ -111,7 +107,7 @@ async function showCV() {
                         </div>`;
 
     educationSection.appendChild(education);
-  });
+  })
 
   const showMoreBtn = document.querySelectorAll(".show_more_btn");
 
@@ -119,9 +115,9 @@ async function showCV() {
     btn.addEventListener("click", function () {
       btn.previousElementSibling.classList.toggle("displayDescription");
       btn.classList.toggle("displayDescription_btn");
-    });
-  });
-};
+    })
+  })
+}
 
 async function showProjects() {
 
@@ -147,7 +143,7 @@ async function showProjects() {
                               </div>
                               </article>`;
 
-  });
+  })
 }
 
 window.addEventListener("scroll", function() {
@@ -191,7 +187,7 @@ window.addEventListener("scroll", function () {
       navBar.classList.remove("navbarScroll");
     }
   }
-});
+})
 
 window.addEventListener("scroll", function () {
   if (window.scrollY > 400) {
@@ -200,7 +196,7 @@ window.addEventListener("scroll", function () {
   if (window.scrollY < 400) {
     workSection.classList.remove("work_section_animation");
   }
-});
+})
 
 window.addEventListener("scroll", function () {
   if (window.scrollY > 700) {
@@ -209,7 +205,7 @@ window.addEventListener("scroll", function () {
   if (window.scrollY < 700) {
     educationSection.classList.remove("education_section_animation");
   }
-});
+})
 
 selfie.addEventListener("mouseover", function () {
   if (document.documentElement.clientWidth >= 700) {
@@ -219,15 +215,14 @@ selfie.addEventListener("mouseover", function () {
     speechBubble.style.display = "none";
     homeText.childNodes.forEach(span => {
       span.classList.add("home_animation");
-    });
+    })
   }
 
-});
+})
 
 darkmodeButton.addEventListener("click", function () {
   darkmodeButton.classList.toggle("darkmode_flex");
   body.classList.toggle("light_mode");
-  // contactInfo.classList.toggle("contact_info_filter");
   socialMedia.classList.toggle("contact_info_filter");
 
   if (darkmodeButton.classList.contains("darkmode_flex")) {
@@ -237,12 +232,11 @@ darkmodeButton.addEventListener("click", function () {
     darkmodeButtonDesktop.classList.remove("darkmode_flex");
   }
 
-});
+})
 
 darkmodeButtonDesktop.addEventListener("click", function () {
   darkmodeButtonDesktop.classList.toggle("darkmode_flex");
   body.classList.toggle("light_mode");
-  // contactInfo.classList.toggle("contact_info_filter");
   socialMedia.classList.toggle("contact_info_filter");
 
   if (darkmodeButtonDesktop.classList.contains("darkmode_flex")) {
@@ -251,4 +245,4 @@ darkmodeButtonDesktop.addEventListener("click", function () {
   else {
     darkmodeButton.classList.remove("darkmode_flex");
   }
-});
+})
